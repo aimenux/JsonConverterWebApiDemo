@@ -1,3 +1,5 @@
+[![.NET](https://github.com/aimenux/JsonConverterWebApiDemo/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/aimenux/JsonConverterWebApiDemo/actions/workflows/ci.yml)
+
 # JsonConverterWebApiDemo
 ```
 Using custom JsonConverter to return derived types in api response
