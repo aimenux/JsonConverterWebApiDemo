@@ -1,0 +1,6 @@
+@Api_HostAddress = https://localhost:7158
+
+GET {{Api_HostAddress}}/api/v1/shapes/
+Accept: application/json
+
+###

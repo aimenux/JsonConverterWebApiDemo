@@ -1,0 +1,22 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MongoDbBooksWebApiDemo",
+    "version": "1"
+  },
+  "paths": {
+    "/api/v1/shapes": {
+      "get": {
+        "tags": [
+          "Shapes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
