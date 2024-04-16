@@ -4,6 +4,8 @@ namespace Api.Converters;
 
 public sealed class ShapeJsonConverter : JsonConverter<IShapeDto>
 {
+    private static readonly JsonSerializerOptions CamelCaseOptions = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+    
     public override bool CanConvert(Type typeToConvert)
     {
         return typeof(IShapeDto).IsAssignableFrom(typeToConvert);
@@ -19,13 +21,13 @@ public sealed class ShapeJsonConverter : JsonConverter<IShapeDto>
         switch (value)
         {
             case CircleDto circleDto:
-                JsonSerializer.Serialize(writer, circleDto);
+                JsonSerializer.Serialize(writer, circleDto, CamelCaseOptions);
                 break;
             case SquareDto squareDto:
-                JsonSerializer.Serialize(writer, squareDto);
+                JsonSerializer.Serialize(writer, squareDto, CamelCaseOptions);
                 break;
             case RectangleDto rectangleDto:
-                JsonSerializer.Serialize(writer, rectangleDto);
+                JsonSerializer.Serialize(writer, rectangleDto, CamelCaseOptions);
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(value), $"Unexpected type {value.GetType()}");

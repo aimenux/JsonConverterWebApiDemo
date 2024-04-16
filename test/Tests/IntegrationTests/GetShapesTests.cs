@@ -15,7 +15,8 @@ public class GetShapesTests
     public async Task Should_Get_Shapes_Returns_Ok(string route)
     {
         // arrange
-        var client = _factory.CreateClient();
+        var shapes = new IShape[] { new Circle(), new Square() };
+        var client = _factory.CreateClientWithShapes(shapes);
 
         // act
         var response = await client.GetAsync(route);

@@ -8,27 +8,28 @@ public sealed class GetShapesResponse
 public interface IShapeDto
 {
     public Guid Id { get; }
-    public string Type { get; }
+    public string? Type { get; }
 }
 
 public sealed class CircleDto : IShapeDto
 {
-    public required Guid Id { get; init; }
-    public required string Type { get; init; }
-    public required int Radius { get; init; }
+    public Guid Id { get; init; }
+    public string? Type { get; init; }
+    
+    public int Radius { get; init; }
 }
 
 public sealed class SquareDto : IShapeDto
 {
-    public required Guid Id { get; init; }
-    public required string Type { get; init; }
-    public required int Side { get; init; }
+    public Guid Id { get; init; }
+    public string? Type { get; init; }
+    public int Side { get; init; }
 }
 
 public sealed class RectangleDto : IShapeDto
 {
-    public required Guid Id { get; init; }
-    public required string Type { get; init; }
-    public required int Length { get; init; }
-    public required int Width { get; init; }
+    public Guid Id { get; init; }
+    public string? Type { get; init; }
+    public int Length { get; init; }
+    public int Width { get; init; }
 }
